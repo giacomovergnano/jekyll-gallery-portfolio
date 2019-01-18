@@ -77,8 +77,14 @@ Single album page
 
 
 ### Screenshots of the template in use
-You can visit the actual website here
+
+Index page
+<br>
+<br>
 ![Image of index](screenshots/index.png)
+
+Album page
+<br>
 <br>
 ![Image of album page](screenshots/album.png)
 
