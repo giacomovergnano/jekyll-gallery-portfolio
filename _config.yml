@@ -1,0 +1,12 @@
+title: 86albums
+baseurl: ""
+url: "" # the base hostname & protocol for your site
+destination: _site
+
+# Build settings
+markdown: kramdown
+exclude: ['Gemfile.lock', 'Gemfile']
+
+collections:
+  albums:
+    output: true

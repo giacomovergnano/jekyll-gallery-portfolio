@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="container animated fadeIn" role="document">
+  <main class="columns library is-multiline" role="main">
+
+
+
+    {% for album in site.albums %}
+    <div class="column is-4">
+      <a href="{{ album.url }}">
+      <h6>01/86</h6>
+      <img class="thumb shadow" src="img/{{ album.number }}/thumb.jpg">
+      <h5 class="album">{{ album.title }}</h5>
+      <h6 class="artist">{{ album.artist }}</h6>
+      </a>
+    </div>
+    {% endfor %}
+  </main>
+</div>
+
+    <footer class="site-footer">
+
+  	<p>Giacomo Vergnano</a>. &#169; 2017</p>
+
+</footer>
+

@@ -1,0 +1,29 @@
+html {
+  background-color: $my-grey;
+  color: $my-black;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  font-size: 90%;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  background-color: $my-grey;
+  text-align: center;
+  top: 0;
+  line-height: 3em;
+}
+
+.container {
+  max-width: 60em;
+  padding: 2em;
+  &.album {
+    max-width: 42em;
+  }
+}
+
+.post {
+  max-width: 50em;
+}
