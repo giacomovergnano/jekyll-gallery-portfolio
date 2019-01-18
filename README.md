@@ -78,4 +78,7 @@ Single album page
 
 ### Screenshots of the template in use
 You can visit the actual website here
+![Image of index](screenshots/index.png)
+<br>
+![Image of album page](screenshots/album.png)
 
