@@ -77,14 +77,11 @@ Single album page
 
 
 ### Screenshots of the template in use
-
+<br>
 Index page
-<br>
-<br>
 ![Image of index](screenshots/index.png)
-
+<br>
+<br>
 Album page
-<br>
-<br>
 ![Image of album page](screenshots/album.png)
 
