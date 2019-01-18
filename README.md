@@ -16,9 +16,9 @@ Each cover has its own page with a thumbnail of the original cover, title, verse
 |   └── ...
 ├── img
 |   ├── 01
-|		└── cover.jpg
-|		└── thumb.jpg
-|		└── original.jpg
+|       └── cover.jpg
+|       └── thumb.jpg
+|       └── original.jpg
 |   └── 02
 ├── _includes
 |   ├── head.html
@@ -44,9 +44,9 @@ Each cover has its own page with a thumbnail of the original cover, title, verse
       <div class="column is-4">
         <a href="{{ album.url }}">
         <h6>{{ album.number }}</h6>
-        <img class="thumb shadow" src="img/{{ album.number }}/thumb.jpg">
-        <h5 class="album">{{ album.title }}</h5>
-        <h6 class="artist">{{ album.artist }}</h6>
+        <img src="img/{{ album.number }}/thumb.jpg">
+        <h5>{{ album.title }}</h5>
+        <h6>{{ album.artist }}</h6>
         </a>
       </div>
     {% endfor %}
