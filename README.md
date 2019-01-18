@@ -8,7 +8,6 @@ The posts are called *albums* because I I have written and used this template to
 Each cover has its own page with a thumbnail of the original cover, title, verse of a songe, description, etc..
 
 ```
-.
 ├── _config.yml
 ├── _albums
 |   └── 01.md
