@@ -31,7 +31,7 @@ page-class: home
             {% elsif work.thumb-is == "jpg" %}
               <img src="img/{{ work.number }}/thumb.jpg">
             {% elsif work.thumb-is == "youtube" %}
-              <img src="img/{{ work.number }}/thumb.gif">
+              <iframe class="yt-video" src="https://www.youtube.com/embed/{{work.youtube-link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           {% endif %}
           </div>
           <h5>{{ work.title }}</h5>

@@ -1,6 +1,6 @@
 function pageLoaded() {
-  // document.querySelector("main").style.opacity = 1;
-  // $(".loader-box").fadeOut();
+  document.querySelector("main").style.opacity = 1;
+  $(".loader-box").fadeOut();
   AOS.init({
     once: true,
     duration: 800
