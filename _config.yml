@@ -8,5 +8,5 @@ markdown: kramdown
 exclude: ['Gemfile.lock', 'Gemfile']
 
 collections:
-  albums:
+  works:
     output: true

@@ -1,19 +1,57 @@
 ---
 layout: default
+page-class: home
 ---
 
-<div class="container animated fadeIn" role="document">
-  <main class="columns library is-multiline" role="main">
-    {% for album in site.albums %}
-      <div class="column is-4">
-        <a href="{{ album.url }}">
-        <h6>{{ album.number }}</h6>
-        <img class="thumb shadow" src="img/{{ album.number }}/thumb.jpg">
-        <h5 class="album">{{ album.title }}</h5>
-        <h6 class="artist">{{ album.artist }}</h6>
+<div data-aos="fade" data-aos-delay="200" class="section first" role="document">
+  <div class="hero">
+    SOME&nbsp; OF<br>MY&nbsp; WORK 
+  </div>
+  <canvas id="blob"></canvas>
+</div>
+
+
+<div class="container" role="document">
+  <main class="columns is-multiline" role="main">
+    {% for work in site.works %}
+      <div data-aos="fade-up" data-aos-delay="200" class="column is-6 work">
+        {% if work.external-link contains "https" %}
+          <a target="_blank" href="{{ work.external-link }}">
+        {% else %}
+          <a href="{{ work.url }}">
+        {% endif %}
+          <div class="thumb">
+          {% if work.thumb-is == "video" %}
+            <video class="video-loaded" id="{{ work.number }}-video-thumb" muted playsinline autoplay loop>
+              <source src="img/{{ work.number }}/thumb.mp4" type="video/mp4">
+                <source src="img/{{ work.number }}/thumb.webm" type="video/webm">
+            </video>
+            {% elsif work.thumb-is == "gif" %}
+              <img src="img/{{ work.number }}/thumb.gif">
+            {% elsif work.thumb-is == "jpg" %}
+              <img src="img/{{ work.number }}/thumb.jpg">
+            {% elsif work.thumb-is == "youtube" %}
+              <img src="img/{{ work.number }}/thumb.gif">
+          {% endif %}
+          </div>
+          <h5>{{ work.title }}</h5>
+          <p>{{ work.intro }}</p>
+          {% if work.external-link contains "https" %}
+            <a  class="blue" target="_blank" href="{{ work.external-link }}">Go to website</a>
+          {% else %}
+            <a class="blue" href="{{ work.url }}">Read more</a>
+          {% endif %}
         </a>
       </div>
+      <div class="column is-6"></div>
+      <div class="column is-6"></div>
     {% endfor %}
+    <div class="column is-6">
+      <h6>Don't hesitate to contact me to request the full portfolio and case studies.</h6>
+      Write an email to <a class="blue" href="mailto:info@giacomo.works">info@giacomo.works</a>
+      <br><br><br>
+    </div>
   </main>
 </div>
 
+<script type="text/javascript" src="js/index.js"></script>

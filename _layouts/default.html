@@ -3,11 +3,28 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="light {{ page.page-class }}">
     {% include header.html %}
+    <div class="loader-box">
+      <img src="img/loader.gif">
+    </div>
     {{content}}
-  </body>
+  
   <footer>
-  	
+    <div class="container">
+    {% if page.page-class == home %}
+      <a href="/">< Back to Home</a>
+    {% else %}
+      <a href="/">&nbsp;</a>
+    {% endif %}
+    <div class="color-switcher">
+      <button data-tooltip="Change to a light theme" id="light-switcher" class="light active">
+      </button>
+      <button href="#" data-tooltip="Change to a dark theme" id="dark-switcher" class="dark">
+      </button>
+    </div>
+    </div>
   </footer>
+  </body>
+  <script src="js/init.js"></script>
 </html>

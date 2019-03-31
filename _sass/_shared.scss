@@ -1,0 +1,115 @@
+$my-black: #1d1d1d;
+$my-grey: #f7f7f7;
+
+
+.loader-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 8rem;
+  display: none;
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -150px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=0);
+  opacity: 1;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 5.61rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em;
+  font-weight: 400; }
+
+h2 {
+  font-size: 4.209rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em; 
+font-weight: 400;}
+
+h3 {
+  font-size: 3.157rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em; 
+font-weight: 400;}
+
+h4 {
+  font-size: 2.369rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em;font-weight: 400; }
+
+h5 {
+  font-size: 1.777rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em;font-weight: 400; }
+
+h6 {
+  font-size: 1.333rem;
+  line-height: 1.2em;
+  margin-top: .3em;
+  margin-bottom: .5em;font-weight: 400; }

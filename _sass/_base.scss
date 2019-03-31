@@ -1,26 +1,53 @@
 html {
   background-color: $my-grey;
   color: $my-black;
-  font-family: sans-serif;
-  line-height: 1.5em;
-  font-size: 90%;
 }
 
-header {
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
-  background-color: $my-grey;
-  text-align: center;
-  top: 0;
-  line-height: 3em;
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.5em;
+  &.light {
+    background-color: white;
+    color: $my-black;
+    a {
+      color: $my-black;
+      &.blue {
+        color: #00f;
+        text-decoration: underline;
+      }
+    }
+  }
+  &.dark {
+    background-color: $my-black;
+    color: white;
+    a {
+      color: white;
+      &.blue {
+        color: #0085ff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+a {
+  display: inline-block;
+}
+button {
+  outline-color: rgba(0,0,0,0);
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
 }
 
 .container {
-  max-width: 60em;
+  max-width: 80em;
   padding: 2em;
-  &.album {
-    max-width: 42em;
+  padding-top: 4em;
+  > main.columns {
+    margin-bottom: 5rem;
   }
 }
 
@@ -28,26 +55,52 @@ header {
   max-width: 50em;
 }
 
-.cover {
-  height: 100%;
+header {
+  position: fixed;
+  height: 3rem;
+  line-height: 1.5em;
+  z-index: 5;
   width: 100%;
+  .container  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+  }
+  a {
+    padding: 0 1em;
+    font-size: 1.2em;
+  }
 }
 
-/* TYPOGRAPHY */
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 2rem; }
-
-h3 {
-  font-size: 1.375rem; }
-
-h4 {
-  font-size: 1.125rem; }
-
-h5 {
-  font-size: 1rem; }
-
-h6 {
-  font-size: 0.875rem; }
+footer {
+  padding: 1em 2em;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  width: 100vw;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  button {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    background-color: $my-black;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    border: 1px solid #333;
+    margin-left: 1em;
+    outline-style: none;
+    &.light {
+      background-color: white;
+    }
+    &.active {
+      box-shadow: 0 0 0 3px rgb(255, 255, 0);
+    }
+  }
+}

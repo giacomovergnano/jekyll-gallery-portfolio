@@ -1,0 +1,34 @@
+.cover {
+  width: 100%;
+  height: 55vh;
+  max-height: 40rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-size: cover;
+  background-position: 50%;
+  display: block;
+}
+
+.light .work-content, .dark .work-content {
+  p {
+    font-size: 1.12rem;
+  }
+  a {
+    color: #0085ff;
+    text-decoration: underline;
+  }
+  .column {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    &.work-title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dark .work-content {
+  a {
+    color: #0085ff;
+    text-decoration: underline;
+  }
+}
