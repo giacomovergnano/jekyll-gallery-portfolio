@@ -11,9 +11,11 @@ body {
     color: $my-black;
     a {
       color: $my-black;
+      cursor: pointer !important;
       &.blue {
         color: #00f;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
@@ -22,9 +24,11 @@ body {
     color: white;
     a {
       color: white;
+      cursor: pointer;
       &.blue {
         color: #0085ff;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
@@ -32,6 +36,7 @@ body {
 
 a {
   display: inline-block;
+  cursor: pointer !important;
 }
 button {
   outline-color: rgba(0,0,0,0);
